@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
+  </head>
+  <style>
+    .avatarImg {
+      background-image: url("https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQdNp-DQsC6XUBeCvMcDBwF84Yr9MGm1qde2Uxf-8otJ1W4Hz5n");
+      background-size: cover;
+    }
+  </style>
+  <body>
+    <div
+      class="container d-flex justify-content-between align-items-center my-5">
+      <h1>My Profile</h1>
+      <a class="btn btn-info btnHome">home</a>
+    </div>
+    <div class="container d-flex gap-5">
+      <sidebar>
+        <div class="btn-group-vertical" aria-label="Vertical button group">
+          <button class="btnNav btn btn-danger">Hồ sơ</button>
+          <button class="btnNav btn btn-outline-danger">Ngân hàng</button>
+          <button class="btnNav btn btn-outline-danger">Địa chỉ</button>
+          <button class="btnNav btn btn-outline-danger">Đổi mật khẩu</button>
+          <a href="/" class="btnNav btn btn-outline-danger">Đăng xuất</a>
+        </div>
+      </sidebar>
+      <section class="flex-grow-1">
+        <div class="d-flex flex-grow-1 gap-5">
+          <div
+            class="flex-grow-1 border border-danger border-bottom-0 border-top-0">
+            <h2 class="text-center mb-4">Hồ sơ</h2>
+            <form class="px-5 text-center">
+              <div class="mb-3 d-flex justify-content-between">
+                <label for="InputUsername" class="form-label"
+                  >User Name:
+                </label>
+                <input
+                  type="text"
+                  class="form-control w-75"
+                  id="InputUsername"
+                  disabled />
+              </div>
+              <div class="mb-3 d-flex justify-content-between">
+                <label for="InputEmail" class="form-label">Email: </label>
+                <input type="email" class="form-control w-75" id="InputEmail" />
+              </div>
+              <div class="mb-3 d-flex justify-content-between">
+                <label for="InputPhone" class="form-label"
+                  >Phone Number:
+                </label>
+                <input type="text" class="form-control w-75" id="InputPhone" />
+              </div>
+              <div class="mb-3 d-flex gap-5">
+                Gender:
+                <div class="form-check ms-5">
+                  <input type="radio" value="male" name="gender" />
+                  Nam
+                </div>
+                <div class="form-check">
+                  <input type="radio" value="female" name="gender" />
+                  Nữ
+                </div>
+                <div class="form-check">
+                  <input type="radio" value="other" name="gender" />
+                  Khác
+                </div>
+              </div>
+              <div
+                class="mb-3 d-flex justify-content-between align-items-center">
+                <label for="InputDate" class="form-label"
+                  >Date of birth:
+                </label>
+                <input type="date" class="form-control w-75" id="InputDate" />
+              </div>
+              <button type="button" class="btn btn-primary px-5 btnLuu">
+                Lưu
+              </button>
+            </form>
+          </div>
+          <sidebar>
+            <div class="mb-3 text-center">
+              <div
+                class="rounded-circle overflow-hidden m-auto border border-success"
+                style="width: 150px; height: 150px">
+                <img
+                  style="width: 150px; height: 150px"
+                  class="avatarImg object-fit-cover"
+                  src="" />
+              </div>
+              <label for="avatar-file" class="form-label">Chọn Avatar</label>
+              <input class="form-control" type="file" id="avatar-file" />
+              <p>⚠⚠⚠ Ảnh sẽ mất khi đăng xuất</p>
+            </div>
+          </sidebar>
+        </div>
+      </section>
+      <section class="d-none flex-grow-1">
+        <div class="border border-danger border-top-0 border-bottom-0">
+          <div class="d-flex justify-content-evenly">
+            <div class="p-5">
+              <h2 class="text-center mb-4">Thẻ tín dụng/ ghi nợ</h2>
+              <div class="text-center">Bạn chưa liên kết thẻ.</div>
+            </div>
+            <div class="line bg-danger" style="width: 2px"></div>
+            <div class="p-5">
+              <h2 class="text-center mb-4">Tài Khoản Ngân Hàng Của Tôi</h2>
+              <div class="text-center">Bạn chưa có tài khoản ngân hàng.</div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="d-none flex-grow-1">
+        <div class="border border-danger border-top-0 border-bottom-0">
+          <h2 class="text-center mb-4">Địa chỉ</h2>
+          <div class="p-5 ms-auto" style="width: 800px">
+            <label for="inputAddress" class="form-label">Address</label>
+            <input
+              type="text"
+              id="inputAddress"
+              class="form-control mb-2 w-50"
+              aria-describedby="passwordHelpBlock" />
+            <button type="button" class="btn btn-success mt-3 btnAddress">
+              Thêm địa chỉ
+            </button>
+          </div>
+        </div>
+      </section>
+      <section class="d-none flex-grow-1">
+        <div class="border border-danger border-top-0 border-bottom-0">
+          <h2 class="text-center mb-4">Đổi mật khẩu</h2>
+          <div class="p-5 ms-auto" style="width: 800px">
+            <label for="inputUser" class="form-label">User Name</label>
+            <input
+              type="text"
+              id="inputUser"
+              class="form-control mb-2 w-50"
+              aria-describedby="passwordHelpBlock"
+              disabled />
+            <label for="inputNewPassword" class="form-label"
+              >New Password</label
+            >
+            <input
+              type="password"
+              id="inputNewPassword"
+              class="form-control mb-2 w-50"
+              aria-describedby="passwordHelpBlock" />
+            <label for="inputRepeatPassword" class="form-label"
+              >Repeat Password</label
+            >
+            <input
+              type="password"
+              id="inputRepeatPassword"
+              class="form-control mb-2 w-50"
+              aria-describedby="passwordHelpBlock" />
+            <button type="button" class="btn btn-success mt-3 btnUpdate">
+              Cập nhật
+            </button>
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
+  <script
+    src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+    integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+    crossorigin="anonymous"></script>
+  <script src="profile.js"></script>
+</html>

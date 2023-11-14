@@ -1,0 +1,23 @@
+.card-img-top.animated {
+  position: absolute;
+  object-fit: cover;
+  animation: fly 1s linear infinite;
+}
+
+@keyframes fly {
+  0% {
+    top: 0px;
+    left: 0px;
+  }
+  100% {
+    top: var(--top);
+    transform: scale(0.2);
+    left: var(--left);
+  }
+}
+
+/* 100% {
+    top: -210px;
+    transform: scale(0.2);
+    left: -538px;
+  } */
